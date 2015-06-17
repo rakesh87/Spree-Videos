@@ -22,7 +22,7 @@ module Spree
       end
 
       def load_data
-        @product = Product.find_by_permalink(params[:product_id])
+        @product = Product.friendly.find(params[:product_id])
       end
 
       def set_product
