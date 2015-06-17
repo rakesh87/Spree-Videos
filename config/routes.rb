@@ -1,7 +1,7 @@
 Spree::Core::Engine.routes.append do
   resources :videos
   resources :products do
-    match 'videos' => 'videos#product_index'
+    match 'videos' => 'videos#product_index', via: :all
   end
   
   namespace :admin do
