@@ -7,7 +7,7 @@ module Spree
     end
 
     def product_index
-      @product = Product.find_by_permalink(params[:product_id])
+      @product = Product.friendly.find(params[:product_id])
       @videos = @product.videos.all(:order => 'position')
     end
 
