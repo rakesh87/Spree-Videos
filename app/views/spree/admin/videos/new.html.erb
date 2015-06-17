@@ -1,3 +1,5 @@
+<%= render :partial => 'spree/admin/shared/product_tabs', :locals => {:current => "Videos"} %>
+
 <h4><%= t("new_video") %></h4>
 <%= form_for(:video, :url => { :controller => 'videos', :action => 'create' }, :html => { :multipart => true }) do |form| %>
   <table class="basic-table">
@@ -15,7 +17,6 @@
     jQuery('#new_video_link').show();
     jQuery('#video').html('');
   });  
- 
 </script>
 
  
